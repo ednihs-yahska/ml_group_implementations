@@ -1,0 +1,14 @@
+,
+weight,feature
+-0.00301654808,bedrooms
+1.043001265,bathrooms
+5.849090878,sqft_living
+-0.4348848174,floors
+3.202633604,waterfront
+3.384332146,view
+7.468285264,grade
+5.328632759,sqft_above
+2.05764414,sqft_basement
+4.192429541,lat
+2.40952644,sqft_living15
+-3.562621613,dummy
