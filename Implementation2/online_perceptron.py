@@ -47,7 +47,12 @@ def online_train():
             yi = Y.iloc[i]
             if yi*u <= 0:
                 W = np.add(W,np.multiply(yi,x))
-                error+=1  
+        for i in range(0, n):
+            x = train_df.iloc[i]
+            u = W.dot(x)
+            yi = Y.iloc[i]
+            if yi*u <= 0:
+                error+=1 
         weightsMap[_iter] = W
         training_error.append(error)
         t_accuracy = 1-(error/n);
@@ -77,6 +82,6 @@ def online_predict(weightsMap):
     a = (np.array([accurate_weights]))
     y_ = a.dot(np.transpose(predict_df))
     op = pd.DataFrame(np.sign(y_)).T
-    op.to_csv("oplabel.csv", index=False, header=False)
+    op.to_csv("oplabel___.csv", index=False, header=False)
 
 online_predict(online_train())
